@@ -166,3 +166,4 @@ This project is supported by:
 ## License
 
 Wexflow is [MIT licensed](https://github.com/aelassas/wexflow/blob/main/LICENSE.txt).
+
