@@ -15,20 +15,25 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+# 1. Install the .NET 10 SDK to the default system path so MSBuild finds it naturally
 - task: UseDotNet@2
   displayName: 'Use .NET Core sdk'
   inputs:
     packageType: sdk
     version: 10.x
-    installationPath: $(Agent.ToolsDirectory)/dotnet
 
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
+# 2. Use MSBuild to restore the hybrid solution packages
 - task: VSBuild@1
+  displayName: 'Restore NuGet Packages'
+  inputs:
+    solution: '$(solution)'
+    msbuildArguments: '/t:Restore' # This runs MSBuild's native modern restore
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+# 3. Build the solution
+- task: VSBuild@1
+  displayName: 'Build Solution'
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
