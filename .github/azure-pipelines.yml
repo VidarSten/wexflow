@@ -15,26 +15,28 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-# 1. Install the .NET 10 SDK to the default system path so MSBuild finds it naturally
+# 1. Install a stable .NET 10 SDK version that works with MSBuild 17
 - task: UseDotNet@2
   displayName: 'Use .NET Core sdk'
   inputs:
     packageType: sdk
-    version: 10.x
+    version: '10.0.104' # Avoids the 10.0.20x MSBuild incompatibility bug
 
-# 2. Use MSBuild to restore the hybrid solution packages
+# 2. Use 64-bit MSBuild to restore packages so it can find the x64 SDK
 - task: VSBuild@1
   displayName: 'Restore NuGet Packages'
   inputs:
     solution: '$(solution)'
-    msbuildArguments: '/t:Restore' # This runs MSBuild's native modern restore
+    msbuildArguments: '/t:Restore'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    msbuildArchitecture: 'x64' # Forces MSBuild to look in Program Files\dotnet
 
-# 3. Build the solution
+# 3. Build the solution using 64-bit MSBuild
 - task: VSBuild@1
   displayName: 'Build Solution'
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    msbuildArchitecture: 'x64' # Keeps the architecture uniform for the build phase
