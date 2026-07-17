@@ -1,4 +1,4 @@
-[![Build Status](https://aelassas.visualstudio.com/wexflow/_apis/build/status/aelassas.wexflow?branchName=main)](https://aelassas.visualstudio.com/wexflow/_build/latest?definitionId=3&branchName=main) 
+[![build](https://github.com/aelassas/wexflow/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/wexflow/actions/workflows/build.yml)
 [![release](https://github.com/aelassas/wexflow/actions/workflows/release.yml/badge.svg)](https://github.com/aelassas/wexflow/actions/workflows/release.yml)
 [![Docker Image](https://img.shields.io/badge/docker-image-brightgreen?style=flat&logo=docker)](https://hub.docker.com/r/aelassas/wexflow)
 [![Nuget](https://img.shields.io/nuget/dt/Wexflow)](https://www.nuget.org/packages/Wexflow/) 
@@ -7,10 +7,16 @@
 [![](https://img.shields.io/badge/docs-wiki-brightgreen)](https://github.com/aelassas/wexflow/wiki)
 
 <!--
-[![](https://img.shields.io/badge/docs-wiki-brightgreen)](https://github.com/aelassas/wexflow/wiki)
+[![build](https://github.com/aelassas/wexflow/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/wexflow/actions/workflows/build.yml)
+[![release](https://github.com/aelassas/wexflow/actions/workflows/release.yml/badge.svg)](https://github.com/aelassas/wexflow/actions/workflows/release.yml)
+[![Docker Image](https://img.shields.io/badge/docker-image-brightgreen?style=flat&logo=docker)](https://hub.docker.com/r/aelassas/wexflow)
+[![Nuget](https://img.shields.io/nuget/dt/Wexflow)](https://www.nuget.org/packages/Wexflow/) 
 [![](https://raw.githubusercontent.com/aelassas/wexflow/refs/heads/loc/badge.svg)](https://github.com/aelassas/wexflow/actions/workflows/loc.yml)
-[![Latest release](https://img.shields.io/github/v/release/aelassas/wexflow?label=Release&logo=github)](https://github.com/aelassas/wexflow/releases/latest)
+[![NuGet](https://img.shields.io/nuget/v/Wexflow.svg)](https://www.nuget.org/packages/Wexflow/)
+[![](https://img.shields.io/badge/docs-wiki-brightgreen)](https://github.com/aelassas/wexflow/wiki)
 
+[![Build Status](https://aelassas.visualstudio.com/wexflow/_apis/build/status/aelassas.wexflow?branchName=main)](https://aelassas.visualstudio.com/wexflow/_build/latest?definitionId=3&branchName=main) 
+[![Latest release](https://img.shields.io/github/v/release/aelassas/wexflow?label=Release&logo=github)](https://github.com/aelassas/wexflow/releases/latest)
 [![docker-hub](https://github.com/aelassas/wexflow/actions/workflows/docker-hub.yml/badge.svg)](https://github.com/aelassas/wexflow/actions/workflows/docker-hub.yml)
 -->
 
